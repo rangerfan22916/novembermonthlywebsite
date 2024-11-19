@@ -4,105 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Updating Mad Libs</title>
+    <title>Mad Libs</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Live Updating Mad Libs</h1>
+    <h1>Mad Libs</h1>
 
     <div class="input-container">
         <label for="adjective1">Adjective:</label>
-        <input type="text" id="adjective1" oninput="updateStory()">
-
-        <label for="animal1">Animal:</label>
-        <input type="text" id="animal1" oninput="updateStory()">
+        <input type="text" id="adjective1">
 
         <label for="name">Name:</label>
-        <input type="text" id="name" oninput="updateStory()">
+        <input type="text" id="name">
+
+        <label for="animal">Animal:</label>
+        <input type="text" id="animal">
+
+        <label for="verb1">Verb (past tense):</label>
+        <input type="text" id="verb1">
+
+        <label for="noun1">Noun (plural):</label>
+        <input type="text" id="noun1">
 
         <label for="adjective2">Adjective:</label>
-        <input type="text" id="adjective2" oninput="updateStory()">
-
-        <label for="color">Color:</label>
-        <input type="text" id="color" oninput="updateStory()">
-
-        <label for="noun1">Noun:</label>
-        <input type="text" id="noun1" oninput="updateStory()">
+        <input type="text" id="adjective2">
 
         <label for="place">Place:</label>
-        <input type="text" id="place" oninput="updateStory()">
-
-        <label for="adjective3">Adjective:</label>
-        <input type="text" id="adjective3" oninput="updateStory()">
-
-        <label for="animal2">Animal:</label>
-        <input type="text" id="animal2" oninput="updateStory()">
-
-        <label for="verb1">Verb:</label>
-        <input type="text" id="verb1" oninput="updateStory()">
-
-        <label for="adjective4">Adjective:</label>
-        <input type="text" id="adjective4" oninput="updateStory()">
-
-        <label for="adjective5">Adjective:</label>
-        <input type="text" id="adjective5" oninput="updateStory()">
-
-        <label for="adjective6">Adjective:</label>
-        <input type="text" id="adjective6" oninput="updateStory()">
-
-        <label for="noun2">Noun:</label>
-        <input type="text" id="noun2" oninput="updateStory()">
+        <input type="text" id="place">
 
         <label for="verb2">Verb:</label>
-        <input type="text" id="verb2" oninput="updateStory()">
+        <input type="text" id="verb2">
+
+        <label for="food">Food:</label>
+        <input type="text" id="food">
 
         <label for="emotion">Emotion:</label>
-        <input type="text" id="emotion" oninput="updateStory()">
+        <input type="text" id="emotion">
 
-        <label for="adjective7">Adjective:</label>
-        <input type="text" id="adjective7" oninput="updateStory()">
-
-        <label for="noun3">Noun:</label>
-        <input type="text" id="noun3" oninput="updateStory()">
+        <label for="color">Color:</label>
+        <input type="text" id="color">
     </div>
 
-    <div class="story" id="story">
-        <p>
-            One <span id="span-adjective1">______</span> morning, a <span id="span-adjective2">______</span>
-            <span id="span-animal1">______</span> named <span id="span-name">______</span> decided to go on an
-            adventure. It was a <span id="span-adjective2">______</span> day, and the sky was <span
-                id="span-color">______</span>.
-            With a <span id="span-noun1">______</span> in hand, <span id="span-name">______</span> set off into the
-            <span id="span-place">______</span>, hoping to find something <span id="span-adjective3">______</span> and
-            <span id="span-adjective3">______</span>.
-        </p>
-        <p>
-            Along the way, <span id="span-name">______</span> met a <span id="span-adjective4">______</span>
-            <span id="span-animal2">______</span> who offered to help. Together, they <span
-                id="span-verb1">______</span>
-            across a <span id="span-adjective4">______</span> river and climbed a <span
-                id="span-adjective5">______</span>
-            mountain. When they reached the top, they found a <span id="span-adjective6">______</span> <span
-                id="span-noun2">______</span>
-            that could <span id="span-verb2">______</span>. They were both <span id="span-emotion">______</span>, but
-            just as they were
-            about to celebrate, a <span id="span-adjective7">______</span> <span id="span-animal1">______</span>
-            appeared, challenging
-            them to a <span id="span-noun3">______</span>.
-        </p>
-        <p>
-            With a <span id="span-adjective7">______</span> <span id="span-noun3">______</span>, they <span
-                id="span-verb1">______</span> bravely
-            and, in the end, <span id="span-name">______</span> emerged victorious, winning the <span
-                id="span-noun2">______</span>. Exhausted but
-            happy, they headed back to the <span id="span-place">______</span>, where they shared their <span
-                id="span-adjective7">______</span>
-            story with everyone. It was a day to remember!
-        </p>
-    </div>
+    <button onclick="generateStory()">Generate Story</button>
 
-    <script src="scripts.js"></script>
+    <div class="story" id="story"></div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
