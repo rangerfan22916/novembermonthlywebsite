@@ -1,14 +1,13 @@
-let username = prompt('WHAT IS YOUR NAME')
-let userquest = prompt('WHAT IS YOUR QUEST')
-let userfavcolor = prompt('WHAT IS YOUR FAVORITE COLOR')
-let swallowirspeed = prompt('WHAT IS THE AIR SPEED OF AN UNLAIDEN SWALLOW')
+function updateStory() {
+  const fields = [
+      "adjective1", "animal1", "name", "adjective2", "color",
+      "noun1", "place", "adjective3", "animal2", "verb1",
+      "adjective4", "adjective5", "adjective6", "noun2", "verb2",
+      "emotion", "adjective7", "noun3"
+  ];
 
-
-let mystory = `<p> hello ${username}. Answer me thse questions <span class="loud">three</span>, and the other side you'll see. </p>
-
-<p> i see you have aalready answered, so ypur quest is to ${userquest} </p>
-`
-
-
-
-document.getElementById('story').innerHTML = myStory
+  fields.forEach(field => {
+      const value = document.getElementById(field).value || "______";
+      document.getElementById(`span-${field}`).textContent = value;
+  });
+}

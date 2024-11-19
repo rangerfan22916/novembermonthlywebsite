@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2a9d8f;
+}
+
+.input-container {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input-container label {
+  flex: 1 1 100%;
+  font-weight: bold;
+}
+
+.input-container input {
+  flex: 1 1 calc(50% - 20px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.story {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #e9f5f2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.story span {
+  font-weight: bold;
+  color: #d62828;
+}
