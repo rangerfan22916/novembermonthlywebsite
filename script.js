@@ -1,42 +1,36 @@
-function generateStory() {
-  const adjective1 = document.getElementById('adjective1').value;
-  const name = document.getElementById('name').value;
-  const animal = document.getElementById('animal').value;
-  const verb1 = document.getElementById('verb1').value;
-  const noun1 = document.getElementById('noun1').value;
-  const adjective2 = document.getElementById('adjective2').value;
-  const place = document.getElementById('place').value;
-  const verb2 = document.getElementById('verb2').value;
-  const food = document.getElementById('food').value;
-  const emotion = document.getElementById('emotion').value;
-  const color = document.getElementById('color').value;
+document.getElementById('generateStory').addEventListener('click', function () {
+    const noun = document.getElementById('noun').value;
+    const verb = document.getElementById('verb').value;
+    const adjective = document.getElementById('adjective').value;
+    const animal = document.getElementById('animal').value;
+    const name = document.getElementById('name').value;
+    const team = document.getElementById('team').value;
+    const place = document.getElementById('place').value;
+    const emotion = document.getElementById('emotion').value;
+    const number = document.getElementById('number').value;
+    const food = document.getElementById('food').value;
+    const color = document.getElementById('color').value;
 
+    if (noun && verb && adjective && animal && name && team && place && emotion && number && food && color) {
+        const story = `
+            <p>One day, a ${adjective} ${noun} named ${name} decided to ${verb} through the ${place}. The sun was shining bright, and the air was crisp, making it the perfect day for an adventure. As ${name} wandered deeper into the ${place}, they felt a sudden wave of ${emotion}. They were about to meet a ${number} ${animal}s who were part of the famous ${team} team.</p>
+            
+            <p>The ${animal}s were excited to see ${name} and offered to share a delicious plate of ${food} with them. The ${color} sky and the scent of the ${food} in the air made everything feel magical. After enjoying the meal, the group decided to race to the top of a hill, where the view was supposed to be the best. Who would win? The ${adjective} ${animal}? Or ${name}?</p>
+            
+            <p>As they raced, ${name} could feel the energy in their legs growing stronger. The ${animal}s were fast, but ${name} wasn’t going to let them win that easily. With one final push, ${name} sprinted to the top, crossing the finish line with a victorious yell. The ${team} cheered, and the celebration continued with even more ${food} and laughs under the ${color} sky.</p>
+            
+            <p>Everyone was happy, but ${name} felt something more—something deep inside that told them this was just the beginning of their greatest adventure yet. After all, who would have thought that a simple trip to the ${place} would turn into such an unforgettable day? It was the perfect combination of ${adjective} moments, wild animals, and a team that never gave up. And that’s how the legend of ${name} and the ${color} ${animal} was born.</p>
+        `;
 
-  const story = `
-      It was a ${adjective1} morning when ${name} laced up their skates for the biggest game of the season. 
-      The rink was packed, and the crowd was roaring as they watched the ${adjective2} game unfold. 
-      ${name} was ready to hit the ice, but before they could even step on, a wild ${animal} appeared on the ice, 
-      skating around with an incredible ${noun1} in its paws. 
+        document.getElementById('story').innerHTML = story;
 
-      The crowd went wild as the ${animal} challenged ${name} to a one-on-one shootout. 
-      Without hesitation, ${name} grabbed their stick, ready to show off their ${adjective2} moves. 
-      They started skating, but the ${animal} was faster than expected! It ${verb1} across the ice, 
-      leaving ${name} in the dust as they tried to chase it down. 
-
-      But suddenly, the puck flew into the air and landed in a pile of ${food}, where ${name} and the ${animal} 
-      had to stop and decide whether to eat or keep playing. After a quick snack, they both got back on the ice, 
-      and the game continued with even more intensity. 
-
-      Just when it looked like ${name} would score the winning goal, a massive ${color} wall of ice appeared, 
-      blocking their shot! In the blink of an eye, they had to ${verb2} past the wall, but it wasn’t easy. 
-      With a last-second move, ${name} slipped the puck past the wall and into the goal, scoring the winning point! 
-      The crowd erupted in applause as ${emotion} spread across ${name}'s face. 
-
-      In the end, ${name} was crowned the MVP of the game and celebrated with their teammates, 
-      while the ${animal} went off to find another adventure. The story of the wild hockey game would be told 
-      for years to come, and ${name} would always be remembered as the player who defeated a ${animal} in a shootout! 
-  `;
-
-
-  document.getElementById('story').innerHTML = story;
-}
+        const videoContainer = document.createElement('div');
+        videoContainer.innerHTML = `
+            <h2>Watch this YouTube video!</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FqC2lO3Yy_4?list=PLPPomK5QKeyWV7PYC9s-PxrDhVIDpt4Oe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        `;
+        document.getElementById('video-container').appendChild(videoContainer);
+    } else {
+        document.getElementById('story').innerHTML = `<p>Please fill out all fields to generate a story.</p>`;
+    }
+});

@@ -4,51 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mad Libs</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mad Lib Story</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Mad Libs</h1>
-
-    <div class="input-container">
-        <label for="adjective1">Adjective:</label>
-        <input type="text" id="adjective1">
-
-        <label for="name">Name:</label>
-        <input type="text" id="name">
-
-        <label for="animal">Animal:</label>
-        <input type="text" id="animal">
-
-        <label for="verb1">Verb (past tense):</label>
-        <input type="text" id="verb1">
-
-        <label for="noun1">Noun (plural):</label>
-        <input type="text" id="noun1">
-
-        <label for="adjective2">Adjective:</label>
-        <input type="text" id="adjective2">
-
-        <label for="place">Place:</label>
-        <input type="text" id="place">
-
-        <label for="verb2">Verb:</label>
-        <input type="text" id="verb2">
-
-        <label for="food">Food:</label>
-        <input type="text" id="food">
-
-        <label for="emotion">Emotion:</label>
-        <input type="text" id="emotion">
-
-        <label for="color">Color:</label>
-        <input type="text" id="color">
+    <div>
+        <input type="text" id="noun" placeholder="Enter a noun">
+        <input type="text" id="verb" placeholder="Enter a verb">
+        <input type="text" id="adjective" placeholder="Enter an adjective">
+        <input type="text" id="animal" placeholder="Enter an animal">
+        <input type="text" id="name" placeholder="Enter a name">
+        <input type="text" id="team" placeholder="Enter a team name">
+        <input type="text" id="place" placeholder="Enter a place">
+        <input type="text" id="emotion" placeholder="Enter an emotion">
+        <input type="text" id="number" placeholder="Enter a number">
+        <input type="text" id="food" placeholder="Enter a food">
+        <input type="text" id="color" placeholder="Enter a color">
+        <button id="generateStory">Generate Story</button>
     </div>
 
-    <button onclick="generateStory()">Generate Story</button>
-
-    <div class="story" id="story"></div>
+    <div id="story"></div>
+    <div id="video-container"></div>
 
     <script src="script.js"></script>
 </body>
