@@ -13,13 +13,15 @@ document.getElementById('generateStory').addEventListener('click', function () {
 
     if (noun && verb && adjective && animal && name && team && place && emotion && number && food && color) {
         const story = `
-            <p>One day, a ${adjective} ${noun} named ${name} decided to ${verb} through the ${place}. The sun was shining bright, and the air was crisp, making it the perfect day for an adventure. As ${name} wandered deeper into the ${place}, they felt a sudden wave of ${emotion}. They were about to meet a ${number} ${animal}s who were part of the famous ${team} team.</p>
-            
-            <p>The ${animal}s were excited to see ${name} and offered to share a delicious plate of ${food} with them. The ${color} sky and the scent of the ${food} in the air made everything feel magical. After enjoying the meal, the group decided to race to the top of a hill, where the view was supposed to be the best. Who would win? The ${adjective} ${animal}? Or ${name}?</p>
-            
-            <p>As they raced, ${name} could feel the energy in their legs growing stronger. The ${animal}s were fast, but ${name} wasn’t going to let them win that easily. With one final push, ${name} sprinted to the top, crossing the finish line with a victorious yell. The ${team} cheered, and the celebration continued with even more ${food} and laughs under the ${color} sky.</p>
-            
-            <p>Everyone was happy, but ${name} felt something more—something deep inside that told them this was just the beginning of their greatest adventure yet. After all, who would have thought that a simple trip to the ${place} would turn into such an unforgettable day? It was the perfect combination of ${adjective} moments, wild animals, and a team that never gave up. And that’s how the legend of ${name} and the ${color} ${animal} was born.</p>
+            <p>In a small, enchanted village nestled at the edge of a shimmering ${place}, there lived a ${adjective} ${noun} named ${name}. Known for their curious spirit and boundless energy, ${name} woke up one morning with an unshakable urge to ${verb}. Packing a small satchel with essentials (and a generous helping of ${food}), ${name} set off on an adventure unlike any other.</p>
+
+            <p>The ${place} was alive with the sights and sounds of nature. Birds chirped melodiously, and the ${color} leaves rustled in a gentle breeze. As ${name} ventured deeper into the forest, they stumbled upon a hidden clearing. There, they found ${number} ${animal}s engaged in what could only be described as an epic game of ${team}-style soccer! Intrigued, ${name} approached, and to their surprise, the ${animal}s invited them to join the game.</p>
+
+            <p>Despite initial nerves, ${name} quickly found their rhythm. Their ${adjective} moves on the field left everyone in awe. The game was intense, with laughter, friendly banter, and daring plays filling the air. When the final whistle blew, ${name}'s team emerged victorious. The ${animal}s roared with excitement, hoisting ${name} up on their shoulders. In that moment, ${name} felt a mix of ${emotion} and pride—it was a day to remember.</p>
+
+            <p>To celebrate, the group gathered around a crackling fire as the ${color} sky turned to twilight. Plates of ${food} were passed around, and stories of legendary adventures were shared. One ${animal}, the leader of the ${team}, told ${name} about a secret treasure hidden within the ${place}. Energized by the tale, ${name} vowed to return one day to uncover it, marking the start of a lifelong friendship with the ${animal}s and an unforgettable chapter in their story.</p>
+
+            <p>As the night wore on and the stars sparkled above, ${name} knew this was more than just a game or a chance meeting. It was a reminder that the best adventures are often unplanned, fueled by a little curiosity, a pinch of courage, and a hearty dose of ${food}. And thus, the tale of ${name} and the legendary ${team} in the magical ${place} became one that would be told for generations.</p>
         `;
 
         document.getElementById('story').innerHTML = story;
